@@ -11,25 +11,20 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f4f8; /* خلفية رمادية فاتحة ناعمة */
+            background-color: #ffffff; /* خلفية بيضاء لتتناسب مع الصفحة */
             display: flex;
             justify-content: center;
             min-height: 100vh;
-            padding: 10px;
         }
 
         .container {
             width: 100%;
             max-width: 750px;
-            margin: 10px auto;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #ffffff; /* خلفية بيضاء للموقع ليبدو نظيفاً */
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            padding-bottom: 30px;
+            background: transparent; /* إزالة الخلفية البيضاء */
         }
         
         /* صورة البروشور */
@@ -37,24 +32,24 @@
             width: 100%;
             height: auto;
             display: block;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* مساحة الأزرار والأيقونات (سطرين) */
+        /* مساحة الأزرار والأيقونات أسفل البروشور */
         .buttons-container {
             width: 100%;
-            padding: 25px 15px 0 15px;
+            padding: 20px 10px 30px 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
+            background: transparent; /* إزالة الخلفية البيضاء لتصبح ملتصقة بالصورة */
         }
 
-        /* الصف الأول: الأزرار التفاعلية */
+        /* الصف الأول: الأزرار التفاعلية (3 أزرار) */
         .row-buttons {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
             width: 100%;
         }
@@ -63,63 +58,51 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px 20px;
+            gap: 8px;
+            padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            font-size: 0.95rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            flex: 1 1 150px; /* يجعل الأزرار بنفس الحجم وتتحرك للأسفل تلقائياً */
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+            flex: 1 1 140px;
             max-width: 220px;
             text-align: center;
-            min-width: 130px;
         }
         
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .btn i { font-size: 1.2rem; }
+        .btn:hover { transform: scale(1.02); }
+        .btn i { font-size: 1.1rem; }
 
-        /* ألوان متناسقة مع البروشور */
-        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
-        .btn-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
-        .btn-email { background: linear-gradient(135deg, #1a2d5e, #2b4a8f); } /* لون أزرق داكن مطابق للبروشور */
+        /* ألوان الأزرار */
+        .btn-whatsapp { background: #25D366; }
+        .btn-youtube { background: #FF0000; }
+        .btn-email { background: #1a2d5e; }
 
-        /* الصف الثاني: أيقونات العرض (Zoom و Google Meet) */
+        /* الصف الثاني: أيقونات العرض (Zoom / Meet) */
         .row-icons {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
             width: 100%;
-            margin-top: 5px;
         }
 
         .icon-box {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 10px 25px;
+            gap: 8px;
+            padding: 10px 20px;
             border-radius: 50px;
-            background-color: #f8f9fa;
+            background-color: #f0f4f8;
             border: 1px solid #e0e0e0;
             color: #333;
             font-weight: 600;
-            font-size: 0.95rem;
-            flex: 1 1 140px;
-            max-width: 200px;
-            min-width: 120px;
-            cursor: default; /* مؤشر الماوس العادي لعدم وجود رابط */
-            transition: background 0.2s;
-        }
-
-        .icon-box i {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
+            flex: 1 1 130px;
+            max-width: 180px;
+            cursor: default;
         }
 
         .icon-zoom i { color: #2D8CFF; }
@@ -127,24 +110,18 @@
 
         /* تحسينات الجوال */
         @media (max-width: 550px) {
-            .btn, .icon-box {
-                flex: 1 1 100%; /* في الجوال يصبح كل زر وأيقونة في سطر كامل */
-                max-width: 100%;
-                padding: 12px;
-                font-size: 1rem;
-            }
-            .container { border-radius: 0; }
-            .buttons-container { padding: 20px 15px; }
+            .buttons-container { padding: 15px 10px 20px 10px; }
+            .btn, .icon-box { flex: 1 1 100%; max-width: 100%; padding: 12px; font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 <div class="container">
     
-    <!-- صورة البروشور (تم استخدام الرابط الجديد) -->
-    <img src="https://i.postimg.cc/BbM0bgHT/ns-fqrtk.png">
+    <!-- صورة البروشور -->
+    <img src="https://i.postimg.cc/BbM0bgHT/ns-fqrtk.png" alt="بروشور الأستاذ فهمي الخلي" class="main-image">
 
-    <!-- مساحة الأزرار والأيقونات أسفل البروشور -->
+    <!-- الأزرار -->
     <div class="buttons-container">
         
         <!-- الصف الأول: 3 أزرار تفاعلية -->
@@ -152,17 +129,15 @@
             <a href="https://wa.me/967777131294" target="_blank" class="btn btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> واتساب
             </a>
-            
             <a href="https://youtube.com/@fahmialkhalimath" target="_blank" class="btn btn-youtube">
                 <i class="fab fa-youtube"></i> يوتيوب
             </a>
-            
             <a href="mailto:fahmi.Alkhali@gmail.com" class="btn btn-email">
                 <i class="fas fa-envelope"></i> البريد الإلكتروني
             </a>
         </div>
 
-        <!-- الصف الثاني: أيقونات العرض (بدون روابط) -->
+        <!-- الصف الثاني: أيقونات العرض -->
         <div class="row-icons">
             <div class="icon-box icon-zoom">
                 <i class="fas fa-video"></i> Zoom

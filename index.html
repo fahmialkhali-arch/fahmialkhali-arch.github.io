@@ -11,7 +11,7 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #ffffff; /* خلفية بيضاء لتتناسب مع الصفحة */
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             min-height: 100vh;
@@ -24,28 +24,31 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: transparent; /* إزالة الخلفية البيضاء */
         }
         
-        /* صورة البروشور */
         .main-image {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* مساحة الأزرار والأيقونات أسفل البروشور */
-        .buttons-container {
-            width: 100%;
-            padding: 20px 10px 30px 10px;
+        /* صندوق الأيقونات (للجوال والكمبيوتر) */
+        .buttons-wrapper {
+            width: 95%;
+            max-width: 550px;
+            background-color: #ffffff;
+            margin-top: -30px; /* يسحب الأزرار للأعلى لتلتصق بالصورة */
+            padding: 20px 15px 25px 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            background: transparent; /* إزالة الخلفية البيضاء لتصبح ملتصقة بالصورة */
+            gap: 12px;
+            position: relative;
+            z-index: 10;
         }
 
-        /* الصف الأول: الأزرار التفاعلية (3 أزرار) */
         .row-buttons {
             display: flex;
             justify-content: center;
@@ -59,72 +62,73 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 50px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            font-size: 0.9rem;
-            transition: transform 0.2s;
-            flex: 1 1 140px;
-            max-width: 220px;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex: 1 1 30%;
+            min-width: 120px;
             text-align: center;
         }
         
         .btn:hover { transform: scale(1.02); }
-        .btn i { font-size: 1.1rem; }
+        .btn i { font-size: 1.2rem; }
 
-        /* ألوان الأزرار */
         .btn-whatsapp { background: #25D366; }
         .btn-youtube { background: #FF0000; }
         .btn-email { background: #1a2d5e; }
 
-        /* الصف الثاني: أيقونات العرض (Zoom / Meet) */
         .row-icons {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 15px;
             flex-wrap: wrap;
             width: 100%;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
         }
 
         .icon-box {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 10px 20px;
+            gap: 6px;
+            padding: 8px 20px;
             border-radius: 50px;
-            background-color: #f0f4f8;
+            background-color: #f8f9fa;
             border: 1px solid #e0e0e0;
             color: #333;
             font-weight: 600;
-            font-size: 0.9rem;
-            flex: 1 1 130px;
-            max-width: 180px;
+            font-size: 0.95rem;
+            flex: 1 1 30%;
+            min-width: 100px;
             cursor: default;
         }
 
         .icon-zoom i { color: #2D8CFF; }
         .icon-meet i { color: #00897B; }
 
-        /* تحسينات الجوال */
         @media (max-width: 550px) {
-            .buttons-container { padding: 15px 10px 20px 10px; }
-            .btn, .icon-box { flex: 1 1 100%; max-width: 100%; padding: 12px; font-size: 1rem; }
+            .buttons-wrapper {
+                width: 100%;
+                margin-top: -15px;
+                border-radius: 20px 20px 0 0; /* استدارة من الأعلى فقط في الجوال */
+                box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+            }
+            .btn { padding: 14px; font-size: 1.05rem; }
         }
     </style>
 </head>
 <body>
 <div class="container">
     
-    <!-- صورة البروشور -->
     <img src="https://i.postimg.cc/BbM0bgHT/ns-fqrtk.png" alt="بروشور الأستاذ فهمي الخلي" class="main-image">
 
-    <!-- الأزرار -->
-    <div class="buttons-container">
+    <div class="buttons-wrapper">
         
-        <!-- الصف الأول: 3 أزرار تفاعلية -->
         <div class="row-buttons">
             <a href="https://wa.me/967777131294" target="_blank" class="btn btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> واتساب
@@ -137,7 +141,6 @@
             </a>
         </div>
 
-        <!-- الصف الثاني: أيقونات العرض -->
         <div class="row-icons">
             <div class="icon-box icon-zoom">
                 <i class="fas fa-video"></i> Zoom
@@ -151,4 +154,4 @@
 
 </div>
 </body>
-</html>
+    </html>

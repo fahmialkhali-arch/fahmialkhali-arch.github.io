@@ -32,7 +32,7 @@
             display: block;
         }
 
-        /* صندوق الأيقونات (القصاصة) */
+        /* صندوق الأيقونات */
         .buttons-wrapper {
             width: 90%;
             max-width: 500px;
@@ -49,7 +49,6 @@
             z-index: 10;
         }
 
-        /* ترتيب الأزرار والأيقونات بشكل مقصّص */
         .row-wrapper {
             display: flex;
             justify-content: center;
@@ -82,26 +81,6 @@
         .btn-youtube { background: #FF0000; }
         .btn-email { background: #1a2d5e; }
 
-        .icon-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 10px 20px;
-            border-radius: 50px;
-            background-color: #f8f9fa;
-            border: 1px solid #e0e0e0;
-            color: #333;
-            font-weight: 600;
-            font-size: 0.95rem;
-            flex: 1 1 100px;
-            min-width: 100px;
-            cursor: default;
-        }
-
-        .icon-zoom i { color: #2D8CFF; }
-        .icon-meet i { color: #00897B; }
-
         @media (max-width: 550px) {
             .buttons-wrapper {
                 width: 95%;
@@ -113,10 +92,10 @@
 <body>
 <div class="container">
     
+    <!-- الصورة الجديدة التي تحتوي على أيقونات Zoom و Meet -->
     <img src="https://i.postimg.cc/BbM0bgHT/ns-fqrtk.png" alt="بروشور الأستاذ فهمي الخلي" class="main-image">
 
     <div class="buttons-wrapper">
-        
         <!-- الصف الأول: الأزرار الأساسية -->
         <div class="row-wrapper">
             <a href="https://wa.me/967777131294" target="_blank" class="btn btn-whatsapp">
@@ -133,17 +112,6 @@
                 <i class="fas fa-envelope"></i> البريد الإلكتروني
             </a>
         </div>
-
-        <!-- الصف الثالث: الأيقونات الإضافية -->
-        <div class="row-wrapper">
-            <div class="icon-box icon-zoom">
-                <i class="fas fa-video"></i> Zoom
-            </div>
-            <div class="icon-box icon-meet">
-                <i class="fas fa-people-arrows"></i> Meet
-            </div>
-        </div>
-
     </div>
 
 </div>

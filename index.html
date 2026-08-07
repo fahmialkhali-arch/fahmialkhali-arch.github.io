@@ -32,15 +32,15 @@
             display: block;
         }
 
-        /* صندوق الأيقونات (للجوال والكمبيوتر) */
+        /* صندوق الأيقونات (القصاصة) */
         .buttons-wrapper {
-            width: 95%;
-            max-width: 550px;
+            width: 90%;
+            max-width: 500px;
             background-color: #ffffff;
-            margin-top: -30px; /* يسحب الأزرار للأعلى لتلتصق بالصورة */
+            margin-top: -20px;
             padding: 20px 15px 25px 15px;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -49,7 +49,8 @@
             z-index: 10;
         }
 
-        .row-buttons {
+        /* ترتيب الأزرار والأيقونات بشكل مقصّص */
+        .row-wrapper {
             display: flex;
             justify-content: center;
             gap: 10px;
@@ -62,48 +63,38 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 12px 25px;
+            padding: 12px 20px;
             border-radius: 50px;
             text-decoration: none;
             color: white;
             font-weight: bold;
             font-size: 1rem;
             transition: transform 0.2s, box-shadow 0.2s;
-            flex: 1 1 30%;
-            min-width: 120px;
+            flex: 1 1 100px;
+            min-width: 100px;
             text-align: center;
         }
         
-        .btn:hover { transform: scale(1.02); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .btn i { font-size: 1.2rem; }
 
         .btn-whatsapp { background: #25D366; }
         .btn-youtube { background: #FF0000; }
         .btn-email { background: #1a2d5e; }
 
-        .row-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            width: 100%;
-            padding-top: 10px;
-            border-top: 1px solid #eee;
-        }
-
         .icon-box {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 6px;
-            padding: 8px 20px;
+            padding: 10px 20px;
             border-radius: 50px;
             background-color: #f8f9fa;
             border: 1px solid #e0e0e0;
             color: #333;
             font-weight: 600;
             font-size: 0.95rem;
-            flex: 1 1 30%;
+            flex: 1 1 100px;
             min-width: 100px;
             cursor: default;
         }
@@ -113,12 +104,9 @@
 
         @media (max-width: 550px) {
             .buttons-wrapper {
-                width: 100%;
+                width: 95%;
                 margin-top: -15px;
-                border-radius: 20px 20px 0 0; /* استدارة من الأعلى فقط في الجوال */
-                box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
             }
-            .btn { padding: 14px; font-size: 1.05rem; }
         }
     </style>
 </head>
@@ -129,24 +117,30 @@
 
     <div class="buttons-wrapper">
         
-        <div class="row-buttons">
+        <!-- الصف الأول: الأزرار الأساسية -->
+        <div class="row-wrapper">
             <a href="https://wa.me/967777131294" target="_blank" class="btn btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> واتساب
             </a>
             <a href="https://youtube.com/@fahmialkhalimath" target="_blank" class="btn btn-youtube">
                 <i class="fab fa-youtube"></i> يوتيوب
             </a>
-            <a href="mailto:fahmi.Alkhali@gmail.com" class="btn btn-email">
+        </div>
+
+        <!-- الصف الثاني: إيميل -->
+        <div class="row-wrapper">
+            <a href="mailto:fahmi.Alkhali@gmail.com" class="btn btn-email" style="flex: 1 1 100%; max-width: 100%;">
                 <i class="fas fa-envelope"></i> البريد الإلكتروني
             </a>
         </div>
 
-        <div class="row-icons">
+        <!-- الصف الثالث: الأيقونات الإضافية -->
+        <div class="row-wrapper">
             <div class="icon-box icon-zoom">
                 <i class="fas fa-video"></i> Zoom
             </div>
             <div class="icon-box icon-meet">
-                <i class="fas fa-people-arrows"></i> Google Meet
+                <i class="fas fa-people-arrows"></i> Meet
             </div>
         </div>
 
@@ -154,4 +148,4 @@
 
 </div>
 </body>
-    </html>
+</html>

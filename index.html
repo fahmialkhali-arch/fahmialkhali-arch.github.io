@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأستاذ فهمي الخلي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* خلفية رمادية فاتحة ناعمة */
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff; /* خلفية بيضاء للموقع ليبدو نظيفاً */
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding-bottom: 30px;
+        }
+        
+        /* صورة البروشور */
+        .main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* مساحة الأزرار والأيقونات (سطرين) */
+        .buttons-container {
+            width: 100%;
+            padding: 25px 15px 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* الصف الأول: الأزرار التفاعلية */
+        .row-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex: 1 1 150px; /* يجعل الأزرار بنفس الحجم وتتحرك للأسفل تلقائياً */
+            max-width: 220px;
+            text-align: center;
+            min-width: 130px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn i { font-size: 1.2rem; }
+
+        /* ألوان متناسقة مع البروشور */
+        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .btn-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+        .btn-email { background: linear-gradient(135deg, #1a2d5e, #2b4a8f); } /* لون أزرق داكن مطابق للبروشور */
+
+        /* الصف الثاني: أيقونات العرض (Zoom و Google Meet) */
+        .row-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 25px;
+            border-radius: 50px;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95rem;
+            flex: 1 1 140px;
+            max-width: 200px;
+            min-width: 120px;
+            cursor: default; /* مؤشر الماوس العادي لعدم وجود رابط */
+            transition: background 0.2s;
+        }
+
+        .icon-box i {
+            font-size: 1.2rem;
+        }
+
+        .icon-zoom i { color: #2D8CFF; }
+        .icon-meet i { color: #00897B; }
+
+        /* تحسينات الجوال */
+        @media (max-width: 550px) {
+            .btn, .icon-box {
+                flex: 1 1 100%; /* في الجوال يصبح كل زر وأيقونة في سطر كامل */
+                max-width: 100%;
+                padding: 12px;
+                font-size: 1rem;
+            }
+            .container { border-radius: 0; }
+            .buttons-container { padding: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    
+    <!-- صورة البروشور (تم استخدام الرابط الجديد) -->
+    <img src="https://i.postimg.cc/66gsjycD/swrt-llmwqʿ.png" alt="بروشور الأستاذ فهمي الخلي" class="main-image">
+
+    <!-- مساحة الأزرار والأيقونات أسفل البروشور -->
+    <div class="buttons-container">
+        
+        <!-- الصف الأول: 3 أزرار تفاعلية -->
+        <div class="row-buttons">
+            <a href="https://wa.me/967777131294" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> واتساب
+            </a>
+            
+            <a href="https://youtube.com/@fahmialkhalimath" target="_blank" class="btn btn-youtube">
+                <i class="fab fa-youtube"></i> يوتيوب
+            </a>
+            
+            <a href="mailto:fahmi.Alkhali@gmail.com" class="btn btn-email">
+                <i class="fas fa-envelope"></i> البريد الإلكتروني
+            </a>
+        </div>
+
+        <!-- الصف الثاني: أيقونات العرض (بدون روابط) -->
+        <div class="row-icons">
+            <div class="icon-box icon-zoom">
+                <i class="fas fa-video"></i> Zoom
+            </div>
+            <div class="icon-box icon-meet">
+                <i class="fas fa-people-arrows"></i> Google Meet
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

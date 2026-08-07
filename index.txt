@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأستاذ فهمي الخلي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .buttons-wrapper {
+            width: 90%;
+            max-width: 500px;
+            background-color: #ffffff;
+            margin-top: -20px;
+            padding: 20px 15px 25px 15px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            z-index: 10;
+        }
+        .row-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex: 1 1 100px;
+            min-width: 100px;
+            text-align: center;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .btn i { font-size: 1.2rem; }
+        .btn-whatsapp { background: #25D366; }
+        .btn-youtube { background: #FF0000; }
+        .btn-email { background: #1a2d5e; }
+        @media (max-width: 550px) {
+            .buttons-wrapper {
+                width: 95%;
+                margin-top: -15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="https://i.postimg.cc/zfFLXwLc/swrt-mhdtht-1-202607261817-1.png" alt="بروشور الأستاذ فهمي الخلي" class="main-image">
+    <div class="buttons-wrapper">
+        <div class="row-wrapper">
+            <a href="https://wa.me/967777131294" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+            <a href="https://youtube.com/@fahmialkhalimath" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
+        </div>
+        <div class="row-wrapper">
+            <a href="mailto:fahmi.Alkhali@gmail.com" class="btn btn-email" style="flex: 1 1 100%; max-width: 100%;"><i class="fas fa-envelope"></i> البريد الإلكتروني</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
